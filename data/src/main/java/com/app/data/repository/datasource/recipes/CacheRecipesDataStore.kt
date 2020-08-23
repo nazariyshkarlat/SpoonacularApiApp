@@ -15,7 +15,8 @@ class CacheRecipesDataStore(
         sort: String
     ): List<RecipeEntity> =
         try {
-            recipesListDao.getRecipesList()
+            println(recipesListDao.getRecipesList(offset, offset+number))
+            recipesListDao.getRecipesList(offset, offset+number)
         } catch (exception: Exception) {
             if (exception is CancellationException)
                 throw exception

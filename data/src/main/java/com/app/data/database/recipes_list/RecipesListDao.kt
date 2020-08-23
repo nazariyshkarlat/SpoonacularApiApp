@@ -15,8 +15,8 @@ interface RecipesListDao {
     @Query("DELETE FROM ${RecipeEntity.TABLE_NAME} WHERE recipeId = :recipeId")
     suspend fun deleteRecipe(recipeId: Long)
 
-    @Query("SELECT * FROM ${RecipeEntity.TABLE_NAME} ORDER BY date DESC")
-    suspend fun getRecipesList(): List<RecipeEntity>
+    @Query("SELECT * FROM ${RecipeEntity.TABLE_NAME} ORDER BY date DESC LIMIT :limit OFFSET :offset")
+    suspend fun getRecipesList(offset: Int, limit: Int): List<RecipeEntity>
 
     @Query("SELECT EXISTS(SELECT * FROM ${RecipeEntity.TABLE_NAME} WHERE recipeId = :recipeId)")
     suspend fun checkRecipeSaved(recipeId: Long): Boolean
