@@ -1,0 +1,35 @@
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
+
+    signingConfigs {
+        release {
+            storeFile file('..\\jks\\key.jks')
+            storePassword '\\W/[Bq~;Z)Tq5)U\''
+            keyAlias = 'upload'
+            keyPassword '\\W/[Bq~;Z)Tq5)U\''
+        }
+    }
+
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.release
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
