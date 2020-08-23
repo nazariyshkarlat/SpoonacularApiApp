@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Fruit Cocktail</string>
+    <string name="no_connection">Connection error</string>
+    <string name="no_recipes_found">No recipes found</string>
+    <string name="retry">Retry</string>
+    <string name="search">Search</string>
+    <string name="saved_recipes">Saved recipes</string>
+    <string name="recipe_was_saved">Recipe was successfully saved</string>
+    <string name="recipe_was_deleted">Recipe was removed from saved recipes</string>
+</resources>

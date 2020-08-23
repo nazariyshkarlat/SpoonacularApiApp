@@ -1,0 +1,70 @@
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorControlHighlight">@color/colorControlHighlight</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:colorEdgeEffect">@color/gray80</item>
+    </style>
+
+    <style name="Regular14" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/black_87</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Regular18" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/black_87</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Medium18" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/black_87</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Medium16White" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/white_87</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Medium24" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/black_87</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="RecipeCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">8dp</item>
+        <item name="rippleColor">?colorControlHighlight</item>
+        <item name="cardElevation">4dp</item>
+        <item name="useCompatPadding">false</item>
+    </style>
+
+    <style name="SearchEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:maxLength">24</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:hint">@string/search</item>
+        <item name="drawableStartCompat">@drawable/ic_search</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:textColor">@color/black_87</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColorHint">@color/black_50</item>
+        <item name="android:background">@drawable/search_view_background</item>
+    </style>
+
+    <style name="FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="rippleColor">?colorControlHighlight</item>
+        <item name="backgroundTint">?colorAccent</item>
+        <item name="tint">@android:color/white</item>
+        <item name="elevation">0dp</item>
+        <item name="pressedTranslationZ">0dp</item>
+    </style>
+</resources>

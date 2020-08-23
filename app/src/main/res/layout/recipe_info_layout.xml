@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/recipeInfoLayoutScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/recipeInfoLayoutContentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingTop="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/recipeInfoLayoutImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/recipe_info_image_placeholder"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:id="@+id/recipeInfoLayoutRecipeSummary"
+                style="@style/Regular18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorLink="?colorAccent"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/block_drawable"/>
+
+            <LinearLayout
+                android:id="@+id/recipeInfoLayoutRecipeAnalyzedInstructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <TextView
+        android:id="@+id/recipeInfoLayoutRecipeTitle"
+        style="@style/Medium24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:alpha="0.96"/>
+
+    <ProgressBar
+        android:id="@+id/recipeInfoLayoutProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/recipeInfoLayoutFAB"
+        style="@style/FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/fab_bookmark_selector" />
+
+</FrameLayout>
