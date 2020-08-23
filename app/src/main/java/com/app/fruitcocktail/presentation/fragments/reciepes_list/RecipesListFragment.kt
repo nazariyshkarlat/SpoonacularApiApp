@@ -66,8 +66,11 @@ class RecipesListFragment : BaseFragment(R.layout.recipes_list_layout){
 
                         is RecipesListViewModel.RecipesResultState.FirstResults -> {
                             hideEmptyView()
-                            recipesListRecyclerView.scrollY = 0
                             recipesListRecyclerView.adapter!!.notifyDataSetChanged()
+
+                            recipesListRecyclerView.post{
+                                recipesListRecyclerView.scrollY = 0
+                            }
                         }
                         is RecipesListViewModel.RecipesResultState.MoreResults -> {
                             recipesListRecyclerView.adapter!!.notifyItemChanged(viewModel.recyclerItems.indexOfFirst { it is RecipesListRecyclerItemUiModel.ProgressUiModel })
@@ -124,7 +127,7 @@ class RecipesListFragment : BaseFragment(R.layout.recipes_list_layout){
         recipesListSearchLayoutImage.setOnClickListener {
             (activity as AppCompatActivity).replaceFragment(RecipesListFragment().apply {
                 arguments = bundleOf("ARE_SAVED_RECIPES" to true)
-            }, R.id.frameLayout)
+            }, R.id.mainFrameLayout)
         }
 
         recipesListLayoutSearchLayout.addTextChangedListener(object : TextWatcher{
@@ -140,7 +143,7 @@ class RecipesListFragment : BaseFragment(R.layout.recipes_list_layout){
                     recipesListSearchLayoutImage.setOnClickListener {
                         (activity as AppCompatActivity).replaceFragment(RecipesListFragment().apply {
                             arguments = bundleOf("ARE_SAVED_RECIPES" to true)
-                        }, R.id.frameLayout)
+                        }, R.id.mainFrameLayout)
                     }
                 }else{
                     recipesListSearchLayoutImage.setImageResource(R.drawable.ic_close)
